@@ -3,10 +3,10 @@
 </div>
 
 <p align="center">
-  <img src="https://i.postimg.cc/DyqKStwP/IMG-20260410-WA0057.png" width="250" height="250" alt="TOM-PRIME-X-MINI" style="border-radius:50%; border:3px solid #00ff88;">
+  <img src="https://i.postimg.cc/DyqKStwP/IMG-20260410-WA0057.png" width="250" height="250" alt="TOM-PRIME-X-MINI-BOT" style="border-radius:50%; border:3px solid #00ff88;">
 </p>
 
-<h1 align="center"><font color="#00ff88">💠 𝐓𝐎𝐌-𝐏𝐑𝐈𝐌𝐄-𝐗-MINI-𝐁𝐎𝐓 💠</font></h1>
+<h1 align="center"><font color="#00ff88">💠 𝐓𝐎𝐌-𝐏𝐑𝐈𝐌𝐄-𝐗-𝐌𝐈𝐍𝐈-𝐁𝐎𝐓 💠</font></h1>
 
 <p align="center">
   <font color="#00d26a"><i>"Unleash the Power of Minimalism."</i></font><br>
@@ -15,7 +15,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&size=24&duration=3000&pause=1000&color=00ff88&center=true&vCenter=true&width=650&lines=TOM+PRIME+X+WHATSAPP+BOT+IS+LIVE;ULTRA+FAST+%26+ANTI-BAN+SYSTEM;FORK+%26+DEPLOY+IN+1+MINUTE)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&size=24&duration=3000&pause=1000&color=00ff88&center=true&vCenter=true&width=650&lines=TOM+PRIME+X+MINI+BOT+IS+LIVE;ULTRA+FAST+%26+ANTI-BAN+SYSTEM;FORK+%26+DEPLOY+IN+1+MINUTE)](https://git.io/typing-svg)
 
 <br/>
 
@@ -48,7 +48,7 @@
 ### <font color="#00ff88">🔱 PROJECT OVERVIEW</font>
 <div style="border:2px solid #00ff88; padding:15px; border-radius:10px; background:#0d1117;">
 <font color="#ffffff">
-<b>TOM-PRIME-X-WHATSAPP-BOT</b> is a high-performance WhatsApp automation engine built on <font color="#00d26a">Node.js</font> and <font color="#00d26a">Baileys</font>. Designed for speed, stability, and minimal resource usage. Toxic UI + Anti-Ban system + 24/7 uptime.
+<b>TOM-PRIME-X-MINI-BOT</b> is a high-performance WhatsApp automation engine built on <font color="#00d26a">Node.js</font> and <font color="#00d26a">Baileys</font>. Designed for speed, stability, and minimal resource usage. Toxic UI + Anti-Ban system + 24/7 uptime.
 </font>
 </div>
 
