@@ -26,11 +26,11 @@
 <br/>
 
 <!-- AUTO COUNT BADGES -->
-[![Stars](https://img.shields.io/github/stars/yourusername/TOM-PRIME-X-MINI?style=for-the-badge&color=00ff88&label=Stars)](https://github.com/yourusername/TOM-PRIME-X-MINI/stargazers)
-[![Forks](https://img.shields.io/github/forks/yourusername/TOM-PRIME-X-MINI?style=for-the-badge&color=5865F2&label=Forks)](https://github.com/yourusername/TOM-PRIME-X-MINI/network/members)
+[![Stars](https://img.shields.io/github/stars/yourusername/TOM-PRIME-X-MINI?style=for-the-badge&color=00ff88&label=Stars)](https://github.com/TOM-PRIME-X-MINI-BOT/TOM-PRIME-X-WATHAPP-BOT)
+[![Forks](https://github.com/TOM-PRIME-X-MINI-BOT/TOM-PRIME-X-WATHAPP-BOT)
 [![Issues](https://img.shields.io/github/issues/yourusername/TOM-PRIME-X-MINI?style=for-the-badge&color=FFC107&label=Issues)](https://github.com/yourusername/TOM-PRIME-X-MINI/issues)
-[![Size](https://img.shields.io/github/repo-size/yourusername/TOM-PRIME-X-MINI?style=for-the-badge&color=FF0000&label=Size)](https://github.com/yourusername/TOM-PRIME-X-MINI)
-[![Views](https://komarev.com/ghpvc/?username=yourusername&repo=TOM-PRIME-X-MINI&style=for-the-badge&color=00d26a&label=Views)](https://github.com/yourusername/TOM-PRIME-X-MINI)
+[![Size]([https://img.shields.io/github/repo-size/yourusername/TOM-PRIME-X-MINI?style=for-the-badge&color=FF0000&label=Size)](https://github.com/yourusername/TOM-PRIME-X-MINI](https://github.com/TOM-PRIME-X-MINI-BOT/TOM-PRIME-X-WATHAPP-BOT))
+[![Views](https://komarev.com/ghpvc/?username=yourusername&repo=TOM-PRIME-X-MINI&style=for-the-badge&color=00d26a&label=Views)]([https://github.com/yourusername/TOM-PRIME-X-MINI](https://github.com/TOM-PRIME-X-MINI-BOT/TOM-PRIME-X-WATHAPP-BOT))
 [![Channel](https://img.shields.io/badge/CHANNEL-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com)
 
 </div>
