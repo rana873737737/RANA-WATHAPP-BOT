@@ -11,15 +11,30 @@ module.exports = {
     groupOnly: true,
     adminOnly: true,
     botAdminNeeded: true,
-    
+
     async execute(sock, msg, args, extra) {
-      try {
-        await sock.groupSettingUpdate(extra.from, 'announcement');
-        await extra.reply('🔒 Group has been closed!\n\nOnly admins can send messages now.');
-        
-      } catch (error) {
-        await extra.reply(`❌ Error: ${error.message}`);
-      }
+        try {
+            // Close Group
+            await sock.groupSettingUpdate(extra.from, 'announcement');
+
+            await extra.reply(`*—আসসালামু আলাইকুম_ᴇᴠᴇʀʏᴏɴᴇ🤍*
+
+— *𝐆ᴏʀᴜᴩ 𝐎ꜰꜰ..!!🌷❤️‍🩹*
+
+*— \`\`\`𝐎ᴩᴇɴ 𝐓ɪᴍᴇ —কোনো এডমিন একটিভ হলে খোলা হবে.....🌷*
+
+*— আল্লাহ হাফিজ..:)* 🎀🦥
+
+*— 𝐀ʟʟ"🤲🏻😌*
+
+*— 𝐘ᴏᴜʀ 𝐅ᴀᴠᴏʀɪᴛᴇ 𝐀ᴅᴍɪɴ 🤍*`);
+
+        } catch (error) {
+            console.error('Mute Error:', error);
+
+            await extra.reply(`⎯͢✧❌ 𝐄ʀʀᴏʀ 🐱
+
+${error.message}`);
+        }
     }
-  };
-  
+};
