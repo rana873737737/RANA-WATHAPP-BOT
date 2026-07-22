@@ -13,11 +13,11 @@ module.exports = {
     prefix: '.',
     sessionName: '𝐱-мιηι-вσт-typy258toxicevilbrand25780533',
     sessionID: process.env.SESSION_ID || '',
-    newsletterJid: '120363403719538106@newsletter',
+    newsletterJid: '120363429830985012@newsletter',
     updateZipUrl: 'https://github.com/TOM-PRIME-X-MINI-BOT/TOM-PRIME-X-WATHAPP-BOT/archive/refs/heads/main.zip', // URL to latest code zip for .update command
     
     // Sticker Configuration
-    packname: 'Tom Bot Mini',
+    packname: '𝐒ʜꫝʜɪɴ 𝐑ꫝɴꫝ',
     
     // Bot Behavior
     selfMode: true, // Private mode - only owner can use commands
