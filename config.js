@@ -1,15 +1,15 @@
 /**
- * Global Configuration for WhatsApp Tom Bot
- * Devolop By Majidul Islam Zihad
+ * Global Configuration for WhatsApp Rana Bot
+ * Devolop By 𝐒ʜꫝʜɪɴ 𝐑ꫝɴꫝ 
  */
 
 module.exports = {
     // Bot Owner Configuration
-    ownerNumber: ['8801791903810'], // Your Bot number without + or spaces
-    ownerName: ['Tom Prime X'], // Owner names corresponding to ownerNumber array
+    ownerNumber: ['8801793447339'], // Your Bot number without + or spaces
+    ownerName: ['𝐒ʜꫝʜɪɴ 𝐑ꫝɴꫝ'], // Owner names corresponding to ownerNumber array
     
     // Bot Configuration
-    botName: 'Tom Bot Mini',
+    botName: '𝐒ʜꫝʜɪɴ-𝐑ꫝɴꫝ💖',
     prefix: '.',
     sessionName: '𝐱-мιηι-вσт-typy258toxicevilbrand25780533',
     sessionID: process.env.SESSION_ID || '',
