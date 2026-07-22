@@ -3,10 +3,10 @@
 </div>
 
 <p align="center">
-  <img src="https://i.postimg.cc/DyqKStwP/IMG-20260410-WA0057.png" width="250" height="250" alt="RANA-PRIME-X-MINI-BOT" style="border-radius:50%; border:3px solid #00ff88;">
+  <img src="https://i.ibb.co.com/BHvWrzG2/1768616020605.png" width="250" height="250" alt="𝐒ʜꫝʜɪɴ 𝐑ꫝɴꫝ 𝐗-𝐌ɪɴɪ 🚀💖" style="border-radius:50%; border:3px solid #00ff88;">
 </p>
 
-<h1 align="center"><font color="#00ff88">💠 𝐑𝐀𝐍𝐀-𝐏𝐑𝐈𝐌𝐄-𝐗-𝐌𝐈𝐍𝐈-𝐁𝐎𝐓 💠</font></h1>
+<h1 align="center"><font color="#00ff88">💠 𝐒ʜꫝʜɪɴ 𝐑ꫝɴꫝ 𝐗-𝐌ɪɴɪ 🚀💖 💠</font></h1>
 
 <p align="center">
   <font color="#00d26a"><i>"Unleash the Power of Minimalism."</i></font><br>
