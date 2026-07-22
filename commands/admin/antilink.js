@@ -13,68 +13,116 @@ module.exports = {
   groupOnly: true,
   adminOnly: true,
   botAdminNeeded: true,
-  
+
   async execute(sock, msg, args, extra) {
     try {
+
       if (!args[0]) {
         const settings = database.getGroupSettings(extra.from);
-        const status = settings.antilink ? 'ON' : 'OFF';
-        const action = settings.antilinkAction || 'delete';
+        const status = settings.antilink ? '𝐎𝐍' : '𝐎𝐅𝐅';
+        const action = (settings.antilinkAction || 'delete').toUpperCase();
+
+        return extra.reply(`
+⎯͢✧🛠️ 𝐀ɴᴛɪʟɪɴᴋ 𝐒ᴇᴛᴜᴘ 🐱
+
+▢ 𝐒ᴛᴀᴛᴜs : ${status}
+▢ 𝐀ᴄᴛɪᴏɴ : ${action}
+
+📌 𝐔sᴀɢᴇ
+
+▢ .antilink on
+▢ .antilink off
+▢ .antilink set delete
+▢ .antilink set kick
+▢ .antilink get
+`);
+      }
+
+      const opt = args[0].toLowerCase();
+
+      if (opt === 'on') {
+
+        if (database.getGroupSettings(extra.from).antilink) {
+          return extra.reply(
+`⎯͢✧⚠️ 𝐀ɴᴛɪʟɪɴᴋ 𝐀ʟʀᴇᴀᴅʏ 𝐎ɴ 🐱`
+          );
+        }
+
+        database.updateGroupSettings(extra.from, {
+          antilink: true
+        });
+
         return extra.reply(
-          `🔗 *Antilink Status*\n\n` +
-          `Status: *${status}*\n` +
-          `Action: *${action}*\n\n` +
-          `Usage:\n` +
-          `  .antilink on\n` +
-          `  .antilink off\n` +
-          `  .antilink set delete | kick\n` +
-          `  .antilink get`
+`*𝐀ɴᴛɪʟɪɴᴋ 𝐎ɴ- করা হয়েছে... বোকাচোদারা এখন তদের মায়ের ভোদায় লিংক দে..!!☺️🫰🐸☠️*`
+);
+      }
+
+      if (opt === 'off') {
+
+        database.updateGroupSettings(extra.from, {
+          antilink: false
+        });
+
+        return extra.reply(
+`⎯͢✧❎ 𝐀ɴᴛɪʟɪɴᴋ 𝐓ᴜʀɴᴇᴅ 𝐎ғғ 🐱`
         );
       }
-      
-      const opt = args[0].toLowerCase();
-      
-      if (opt === 'on') {
-        if (database.getGroupSettings(extra.from).antilink) {
-          return extra.reply('*Antilink is already on*');
-        }
-        database.updateGroupSettings(extra.from, { antilink: true });
-        return extra.reply('*Antilink has been turned ON*');
-      }
-      
-      if (opt === 'off') {
-        database.updateGroupSettings(extra.from, { antilink: false });
-        return extra.reply('*Antilink has been turned OFF*');
-      }
-      
+
       if (opt === 'set') {
+
         if (args.length < 2) {
-          return extra.reply('*Please specify an action: .antilink set delete | kick*');
+          return extra.reply(`
+⎯͢✧⚙️ 𝐔sᴀɢᴇ
+
+▢ .antilink set delete
+▢ .antilink set kick
+`);
         }
-        
+
         const setAction = args[1].toLowerCase();
+
         if (!['delete', 'kick'].includes(setAction)) {
-          return extra.reply('*Invalid action. Choose delete or kick.*');
+          return extra.reply(`
+⎯͢✧❌ 𝐈ɴᴠᴀʟɪᴅ 𝐀ᴄᴛɪᴏɴ 🐱
+
+▢ 𝐔sᴇ : DELETE | KICK
+`);
         }
-        
-        database.updateGroupSettings(extra.from, { 
+
+        database.updateGroupSettings(extra.from, {
           antilinkAction: setAction,
-          antilink: true // Auto-enable when setting action
+          antilink: true
         });
-        return extra.reply(`*Antilink action set to ${setAction}*`);
+
+        return extra.reply(
+`*𝐀ɴᴛɪʟɪɴᴋ 𝐀𝐜𝐭𝐢𝐨𝐧 ${setAction.toUpperCase()}- করা হয়েছে... এখন কেউ গ্রুপে লিংক চুদালে সাথে সাথে লাথি মেরে গ্রুপ থেকে বের করে দেওয়া হবে..! ☺️🫰🐸☠️*`
+);
       }
-      
+
       if (opt === 'get') {
+
         const settings = database.getGroupSettings(extra.from);
-        const status = settings.antilink ? 'ON' : 'OFF';
-        const action = settings.antilinkAction || 'delete';
-        return extra.reply(`*Antilink Configuration:*\nStatus: ${status}\nAction: ${action}`);
+        const status = settings.antilink ? '𝐎𝐍' : '𝐎𝐅𝐅';
+        const action = (settings.antilinkAction || 'delete').toUpperCase();
+
+        return extra.reply(`
+⎯͢✧📊 𝐀ɴᴛɪʟɪɴᴋ 𝐂ᴏɴғɪɢ 🐱
+
+▢ 𝐒ᴛᴀᴛᴜs : ${status}
+▢ 𝐀ᴄᴛɪᴏɴ : ${action}
+`);
       }
-      
-      return extra.reply('*Use .antilink for usage.*');
-      
+
+      return extra.reply(
+`⎯͢✧ℹ️ 𝐔sᴇ .antilink 🐱`
+      );
+
     } catch (error) {
-      await extra.reply(`❌ Error: ${error.message}`);
+      return extra.reply(
+`⎯͢✧❌ 𝐄ʀʀᴏʀ
+
+${error.message}`
+      );
     }
   }
 };
