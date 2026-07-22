@@ -13,43 +13,68 @@ module.exports = {
   groupOnly: true,
   adminOnly: true,
   botAdminNeeded: true,
-  
+
   async execute(sock, msg, args, extra) {
     try {
       let target;
       const ctx = msg.message?.extendedTextMessage?.contextInfo;
       const mentioned = ctx?.mentionedJid || [];
-      
-      if (mentioned && mentioned.length > 0) {
+
+      if (mentioned.length > 0) {
         target = mentioned[0];
-      } else if (ctx?.participant && ctx.stanzaId && ctx.quotedMessage) {
+      } else if (ctx?.participant && ctx?.stanzaId && ctx?.quotedMessage) {
         target = ctx.participant;
       } else {
-        return extra.reply('❌ Please mention or reply to the user to promote!\n\nExample: .promote @user');
+        return extra.reply(
+          '❌ Please mention or reply to the user to promote!\n\nExample: .promote @user'
+        );
       }
-      
-      // Fetch FRESH group metadata to avoid stale cache
+
+      // Fresh group metadata
       const freshMetadata = await sock.groupMetadata(extra.from);
-      
-      // Use findParticipant for LID-aware matching with fresh metadata
-      const foundParticipant = findParticipant(freshMetadata.participants, target);
-      
+
+      // Find participant
+      const foundParticipant = findParticipant(
+        freshMetadata.participants,
+        target
+      );
+
       if (!foundParticipant) {
         return extra.reply('❌ User not found in group!');
       }
-      
-      // Check if already admin using fresh data
-      if (foundParticipant.admin === 'admin' || foundParticipant.admin === 'superadmin') {
+
+      // Already admin check
+      if (
+        foundParticipant.admin === 'admin' ||
+        foundParticipant.admin === 'superadmin'
+      ) {
         return extra.reply('❌ This user is already an admin!');
       }
-      
+
+      // Promote member
       await sock.groupParticipantsUpdate(extra.from, [target], 'promote');
-      
-      await sock.sendMessage(extra.from, {
-        text: `✅ @${target.split('@')[0]} is now an admin!`,
-        mentions: [target]
-      }, { quoted: msg });
-      
+
+      const promoter =
+        msg.key.participant || extra.sender || msg.key.remoteJid;
+
+      const user = target.split('@')[0];
+      const by = promoter.split('@')[0];
+
+      await sock.sendMessage(
+        extra.from,
+        {
+          text: `-অভিনন্দন......!!💫✨
+@${user}
+
+-আজ থেকে তুমি এই গুরুপের এডমিন...!!🌷🥹🎀
+
+💗 এডমিন দিয়েছেন..!!
+@${by}`,
+          mentions: [target, promoter]
+        },
+        { quoted: msg }
+      );
+
     } catch (error) {
       await extra.reply(`❌ Error: ${error.message}`);
     }
